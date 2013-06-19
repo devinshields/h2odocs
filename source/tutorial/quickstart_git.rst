@@ -9,6 +9,8 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
     $ git clone https://github.com/0xdata/h2o.git
 
+|
+
 2.  Build H2O from source.  You must have Java JDK 1.6 or higher.
     After the build finishes, some JUnit tests will run automatically.
 
@@ -37,6 +39,8 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
     copying jar file... target/h2o-sources.jar to target/h2o-sources-02.33.24-061913.jar
     running JUnit tests...
     OK
+
+|
  
 3.  The build produces target/h2o.jar.  Now run h2o.jar from the command line.
 
@@ -56,7 +60,10 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
  Xmx is the amount of memory given to H2O.  If your data set is large,
  give H2O more memory (for example, -Xmx4g gives H2O four gigabytes of
- memory).  Xmx should never be more than the total amount of memory on
- your computer.
+ memory).  For best performance, Xmx should be 4x the size of your
+ data, but never more than the total amount of memory on your
+ computer.
+
+|
 
 4.  Point your web browser to the HTTP URL (for the example above, ``http://10.197.32.113:54321``)

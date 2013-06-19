@@ -1,4 +1,4 @@
-H2O QuickStart (from a command line, using a pre-compiled jar)
+H2O QuickStart (using a pre-compiled jar)
 ==============================================================
 
 1.  Download the latest release of H2O from `here (http://www.0xdata.com/h2o) <http://www.0xdata.com/h2o/>`_.
@@ -13,8 +13,9 @@ H2O QuickStart (from a command line, using a pre-compiled jar)
 
  Xmx is the amount of memory given to H2O.  If your data set is large,
  give H2O more memory (for example, -Xmx4g gives H2O four gigabytes of
- memory).  Xmx should never be more than the total amount of memory on
- your computer.
+ memory).  For best performance, Xmx should be 4x the size of your
+ data, but never more than the total amount of memory on your
+ computer.
 
 |
 
