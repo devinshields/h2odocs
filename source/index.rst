@@ -16,5 +16,5 @@ Contents:
 
    intro
    tutorial/quickstart
-
+   tutorial/quickstart_git
 
