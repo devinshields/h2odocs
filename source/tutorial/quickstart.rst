@@ -27,8 +27,7 @@ H2O QuickStart (using a pre-compiled jar)
 	+                                  Listening for HTTP and REST traffic on  http://10.197.32.113:54321/
 	03:45:42.047 main      INFO WATER: (v0.3) 'ubuntu' on /10.197.32.113:54321, discovery address /227.66.218.231:58178
 	03:45:42.053 main      INFO WATER: Cloud of size 1 formed [/10.197.32.113:54321]
-	03:45:42.059 main      INFO HDFS: Using HDFS version cdh4
 
 |
 
-4.  Point your web browser to the HTTP URL (for the example above, ``http://10.197.32.113:54321``)
+4.  Point your web browser to the HTTP URL (``http://your-ip-address:54321``)

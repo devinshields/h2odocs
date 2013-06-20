@@ -46,7 +46,7 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
  ::
 
-    $ java -Xmx2g -jar h2o.jar
+    $ java -Xmx2g -jar target/h2o.jar
 
  (Output below)
 
@@ -56,7 +56,6 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 	+                                  Listening for HTTP and REST traffic on  http://10.197.32.113:54321/
 	03:45:42.047 main      INFO WATER: (v0.3) 'ubuntu' on /10.197.32.113:54321, discovery address /227.66.218.231:58178
 	03:45:42.053 main      INFO WATER: Cloud of size 1 formed [/10.197.32.113:54321]
-	03:45:42.059 main      INFO HDFS: Using HDFS version cdh4
 
  Xmx is the amount of memory given to H2O.  If your data set is large,
  give H2O more memory (for example, -Xmx4g gives H2O four gigabytes of
@@ -66,4 +65,4 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
 |
 
-4.  Point your web browser to the HTTP URL (for the example above, ``http://10.197.32.113:54321``)
+4.  Point your web browser to the HTTP URL (``http://your-ip-address:54321``)
