@@ -14,7 +14,20 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   intro
-   tutorial/quickstart
-   tutorial/quickstart_git
+   quickstart/top
+   quickstart/videos
+   tutorial/top
+   tutorial/videos
+   glossary
+   userguide/top
+   algorithms/top
+   architecture/top
+   programmingguide/top
+   api/top
+   deployment/top
+   testing/top
+   howto/top
 
+   datascience/top
+   benchmarks/top
+   professionalvideos/top

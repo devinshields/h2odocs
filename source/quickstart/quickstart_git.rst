@@ -1,5 +1,5 @@
-H2O QuickStart (from Github)
-===============================
+From source code (Github)
+----------------------------
 
 These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 

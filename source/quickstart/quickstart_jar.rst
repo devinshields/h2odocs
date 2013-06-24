@@ -1,5 +1,5 @@
-H2O QuickStart (using a pre-compiled jar)
-==============================================================
+From a pre-compiled jar
+-----------------------------------------
 
 1.  Download the latest release of H2O from `here (http://www.0xdata.com/h2o) <http://www.0xdata.com/h2o/>`_.
 
