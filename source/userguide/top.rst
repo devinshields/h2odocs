@@ -16,3 +16,6 @@ Creating models
 
 Scoring
 -------
+
+Console
+-------
