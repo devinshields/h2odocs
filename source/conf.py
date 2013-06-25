@@ -186,8 +186,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'h2o.tex', u'h2o Documentation',
-   u'SriSatish Ambati', 'manual'),
+  ('index', 'h2o.tex', u'H2O Documentation',
+   u'H2O Open Source Team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -216,8 +216,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'h2o', u'h2o Documentation',
-     [u'SriSatish Ambati'], 1)
+    ('index', 'h2o', u'H2O Documentation',
+     [u'H2O Open Source Team'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -230,8 +230,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'h2o', u'h2o Documentation',
-   u'SriSatish Ambati', 'h2o', 'One line description of project.',
+  ('index', 'h2o', u'H2O Documentation',
+   u'H2O Open Source Team', 'h2o', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -252,9 +252,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'h2o'
-epub_author = u'SriSatish Ambati'
-epub_publisher = u'SriSatish Ambati'
-epub_copyright = u'2013, SriSatish Ambati'
+epub_author = u'H2O Open Source Team'
+epub_publisher = u'H2O Open Source Team'
+epub_copyright = u'2013, H2O Open Source Team'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
