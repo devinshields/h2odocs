@@ -2,26 +2,14 @@
 Architecture
 ============
 
-H2O top-level architecture
---------------------------
+.. toctree::
 
-DKV (and memory consistency model)
-----------------------------------
-
-Distributed fork-join (DFJ)
----------------------------
-
-DRemoteTask
------------
-
-MRTask
-------
-
-Vec (and memory consistency model)
------------------------------------
-
-Chunk (and memory consistency model)
-------------------------------------
-
-Cloud creation and destruction
-------------------------------
+  high_level
+  parse
+  distributed_key_value_store
+  distributed_fork_join
+  dremotetask
+  mrtask
+  vec
+  chunk
+  cloud_creation_and_destruction

@@ -1,5 +1,5 @@
 
-Distributed Fork Join
+Distributed Fork Join (DFJ)
 ===============================
 
 H2O is the OpenSource Math and Prediction Platform for Big Data Science. H2O uses Distributed Fork/Join framework for fine-grain parallelism.
@@ -17,3 +17,4 @@ Fork/Join parallelism is among the simplest and most effective design techniques
 		compose result from subresults
        	}
      }
+
