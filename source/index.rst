@@ -6,28 +6,75 @@
 Welcome to H2O's documentation!
 ===============================
 
-H2O is the OpenSource Math and Prediction Platform for Big Data Science. H2O is extensible and users can build blocks using simple math legos in the core. H2O keeps familiar interfaces like R, Excel & JSON so that big data enthusiasts & experts can explore, munge, model and score datasets using a range of simple to advanced algorithms. Data collection is easy. Decision making is hard. H2O makes it fast and easy to discover insights from your data through faster and better predictive modeling.
+H2O is the open source math and prediction platform for big data
+science.  The documentation is organized according to the following
+user roles: New H2O user, Data scientist, Web developer, Java
+developer, IT person, and finally various miscellaneous categories.
 
 
-Contents:
+For new H2O users...
+++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 2
 
    quickstart/top
    quickstart/videos
+   introduction
+   professionalvideos/top
+
+For Data Scientists (Using a Web Browser)...
+++++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
    tutorial/top
    tutorial/videos
-   glossary
    userguide/top
    algorithms/top
-   architecture/top
-   programmingguide/top
-   api/top
-   deployment/top
-   testing/top
-   howto/top
-
    datascience/top
    benchmarks/top
-   professionalvideos/top
+
+
+For Web Developers (REST/JSON API)...
++++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
+   architecture/toprest
+   programmingguide/toprest
+   api/toprest
+
+
+For Java developers...
+++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
+   architecture/topjava
+   programmingguide/topjava
+   api/topjava
+
+
+For IT people...
+++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
+   deployment/top
+
+
+Miscellaneous...
+++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   glossary
+   testing/top
+   howto/top
+   license
