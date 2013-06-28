@@ -1,0 +1,20 @@
+$ curl -s -v "http://localhost:54321/ImportFiles.json?path=/nonexistent/file.txt" | python -mjson.tool
+* About to connect() to localhost port 54321 (#0)
+*   Trying ::1...
+* connected
+* Connected to localhost (::1) port 54321 (#0)
+> GET /ImportFiles.json?path=/nonexistent/file.txt HTTP/1.1
+> User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0 OpenSSL/0.9.8x zlib/1.2.5
+> Host: localhost:54321
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK 
+< Content-Type: application/json
+< Date: Fri, 28 Jun 2013 05:02:21 GMT
+< 
+{ [data not shown]
+* Closing connection #0
+{
+    "error": "Argument path error: File /nonexistent/file.txt not found!"
+}

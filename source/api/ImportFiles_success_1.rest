@@ -1,0 +1,32 @@
+$ curl -s -v "http://localhost:54321/ImportFiles.json?path=/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data" | python -mjson.tool
+* About to connect() to localhost port 54321 (#0)
+*   Trying ::1...
+* connected
+* Connected to localhost (::1) port 54321 (#0)
+> GET /ImportFiles.json?path=/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data HTTP/1.1
+> User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0 OpenSSL/0.9.8x zlib/1.2.5
+> Host: localhost:54321
+> Accept: */*
+> 
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK 
+< Content-Type: application/json
+< Date: Fri, 28 Jun 2013 04:12:59 GMT
+< 
+{ [data not shown]
+* Closing connection #0
+{
+    "failed": [], 
+    "response": {
+        "h2o": "tomk", 
+        "node": "/192.168.1.87:54321", 
+        "status": "done", 
+        "time": 3
+    }, 
+    "succeeded": [
+        {
+            "file": "/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data", 
+            "key": "nfs://Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data"
+        }
+    ]
+}
