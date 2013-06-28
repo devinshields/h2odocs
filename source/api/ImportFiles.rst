@@ -1,12 +1,14 @@
 ImportFiles
 ^^^^^^^^^^^
 
-Description
-"""""""""""
+Supported HTTP methods and descriptions
+"""""""""""""""""""""""""""""""""""""""""""
 
-   Read in a file from the local host filesystem into H2O
-   memory. (Warning: Every host in the cluster must have this file
-   visible locally!)
+   GET
+
+      Read in a file from the local host filesystem into H2O
+      memory. (Warning: Every host in the cluster must have this file
+      visible locally!)
 
 URL
 """
