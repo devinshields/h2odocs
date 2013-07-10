@@ -7,7 +7,7 @@ Glossary
 
    categorical
 
-        stuff
+        a qualitative variable
 
    cloud
 
@@ -21,7 +21,7 @@ Glossary
 
    CSV file
 
-       stuff
+       CSV is an acronym for comma separated value. A CSV file stores data in a plain text   	format. 
 
    DKV
 
@@ -29,7 +29,7 @@ Glossary
 
    feature
 
-        stuff
+        Synonym for attribute, predictor, and independent variable
 
    gz (gzipped) file
 
@@ -37,7 +37,7 @@ Glossary
 
    HEX format
 
-        stuff
+        Records made up of hexadecimal numbers that represent machine language code or 	constant data. 
 
    job
 
@@ -46,7 +46,7 @@ Glossary
 
    key/value pair
 
-        stuff
+        A type of data that associates a particular key index to a certain datum. 
 
    KV (key/value) store
 
@@ -54,12 +54,14 @@ Glossary
 
    node
 
-        stuff
+        In distributed computing systems nodes include clients, servers or peers. 
+	
+	In statistics a node is a decision or terminal point in a classification tree.
 
    parse
 
-        stuff
+        Analysis of a string of symbols or datum resulting in the conversion of a set of 	information from a person-readable format to a machine-readable format.
 
    XLS file
 
-        stuff
+        A Microsoft Excel 2003 - 2007 spreadsheet file format. 
