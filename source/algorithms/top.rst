@@ -2,18 +2,12 @@
 Algorithms
 =============
 
-GLM
----
+.. toctree::
+   :maxdepth: 2
 
-Random Forest
--------------
+   glm
+   kmeans
+   rf
+   gbm
+   rbm
 
-K-Means
--------
-
-Gradient Boosting Machine
---------------------------
-
-
-Deep Learning: Restricted Boltzmann Machine
--------------------------------------------
