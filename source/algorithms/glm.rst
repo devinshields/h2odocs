@@ -1,6 +1,6 @@
 
-GLM
----
+Generalized Linear Model (GLM)
+------------------------------
 
    When to use GLM
 
