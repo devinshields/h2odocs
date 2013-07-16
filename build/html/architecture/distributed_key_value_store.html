@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DKV (and memory consistency model) &mdash; h2o 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="h2o 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Architecture" href="toprest.html" />
+    <link rel="next" title="Cloud creation and destruction" href="cloud_creation_and_destruction.html" />
+    <link rel="prev" title="Parse" href="parse.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="cloud_creation_and_destruction.html" title="Cloud creation and destruction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="parse.html" title="Parse"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">h2o 1.0 documentation</a> &raquo;</li>
+          <li><a href="toprest.html" accesskey="U">Architecture</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dkv-and-memory-consistency-model">
+<h1>DKV (and memory consistency model)<a class="headerlink" href="#dkv-and-memory-consistency-model" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/top.html">Quick Start Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/videos.html">Quick Start Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professionalvideos/top.html">Concept Videos</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/top.html">Tutorial Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/videos.html">Tutorial Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide/top.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/top.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datascience/top.html">Data Science Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/top.html">Benchmarks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="toprest.html">Architecture</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="high_level.html">H2O high-level architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parse.html">Parse</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">DKV (and memory consistency model)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_creation_and_destruction.html">Cloud creation and destruction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programmingguide/toprest.html">REST (and JSON) Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/toprest.html">REST (and JSON) API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topjava.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programmingguide/topjava.html">Java Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/topjava.html">Java API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/top.html">Deployment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/top.html">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto/top.html">HOWTO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="parse.html"
+                        title="previous chapter">Parse</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cloud_creation_and_destruction.html"
+                        title="next chapter">Cloud creation and destruction</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/architecture/distributed_key_value_store.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="cloud_creation_and_destruction.html" title="Cloud creation and destruction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="parse.html" title="Parse"
+             >previous</a> |</li>
+        <li><a href="../index.html">h2o 1.0 documentation</a> &raquo;</li>
+          <li><a href="toprest.html" >Architecture</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 0xdata, Inc.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

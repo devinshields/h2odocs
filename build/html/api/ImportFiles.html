@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ImportFiles &mdash; h2o 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="h2o 1.0 documentation" href="../index.html" />
+    <link rel="up" title="REST (and JSON) API" href="toprest.html" />
+    <link rel="next" title="Architecture" href="../architecture/topjava.html" />
+    <link rel="prev" title="REST (and JSON) API" href="toprest.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../architecture/topjava.html" title="Architecture"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="toprest.html" title="REST (and JSON) API"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">h2o 1.0 documentation</a> &raquo;</li>
+          <li><a href="toprest.html" accesskey="U">REST (and JSON) API</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="importfiles">
+<h1>ImportFiles<a class="headerlink" href="#importfiles" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="supported-http-methods-and-descriptions">
+<h2>Supported HTTP methods and descriptions<a class="headerlink" href="#supported-http-methods-and-descriptions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>GET</p>
+<blockquote>
+<div>Read in a file from the local host filesystem into H2O
+memory. (Warning: Every host in the cluster must have this file
+visible locally!)</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="url">
+<h2>URL<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><a class="reference external" href="http:/">http:/</a>/&lt;h2oHost&gt;:&lt;h2oApiPort&gt;/ImportFiles.json</div></blockquote>
+</div>
+<div class="section" id="input-parameters">
+<h2>Input parameters<a class="headerlink" href="#input-parameters" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>path [required]</p>
+<blockquote>
+<div>Path name of file to import.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="output-json-elements">
+<h2>Output JSON elements<a class="headerlink" href="#output-json-elements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>succeeded [array of objects]</p>
+<blockquote>
+<div>A list of files that have been successfully imported, and their
+respective DKV storage keys.</div></blockquote>
+<p>failed [array of objects]</p>
+<blockquote>
+<div>A list of files that were requested to be imported, but could not be.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="error-json-elements">
+<h2>Error JSON elements<a class="headerlink" href="#error-json-elements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>error [string]</p>
+<blockquote>
+<div><p>Required argument not specified.</p>
+<p>File not found.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="http-response-codes">
+<h2>HTTP response codes<a class="headerlink" href="#http-response-codes" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>200 OK</p>
+<blockquote>
+<div>Success and error responses are identical.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="success-example">
+<h2>Success Example<a class="headerlink" href="#success-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ curl -s -v "http://localhost:54321/ImportFiles.json?path=/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data" | python -mjson.tool
+* About to connect() to localhost port 54321 (#0)
+*   Trying ::1...
+* connected
+* Connected to localhost (::1) port 54321 (#0)
+&gt; GET /ImportFiles.json?path=/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data HTTP/1.1
+&gt; User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0 OpenSSL/0.9.8x zlib/1.2.5
+&gt; Host: localhost:54321
+&gt; Accept: */*
+&gt; 
+* HTTP 1.0, assume close after body
+&lt; HTTP/1.0 200 OK 
+&lt; Content-Type: application/json
+&lt; Date: Fri, 28 Jun 2013 04:12:59 GMT
+&lt; 
+{ [data not shown]
+* Closing connection #0
+{
+    "failed": [], 
+    "response": {
+        "h2o": "tomk", 
+        "node": "/192.168.1.87:54321", 
+        "status": "done", 
+        "time": 3
+    }, 
+    "succeeded": [
+        {
+            "file": "/Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data", 
+            "key": "nfs://Users/tomk/0xdata/ws/h2o/smalldata/covtype/covtype.20k.data"
+        }
+    ]
+}
+</pre>
+</div>
+</div>
+<div class="section" id="error-example">
+<h2>Error Example<a class="headerlink" href="#error-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ curl -s -v "http://localhost:54321/ImportFiles.json?path=/nonexistent/file.txt" | python -mjson.tool
+* About to connect() to localhost port 54321 (#0)
+*   Trying ::1...
+* connected
+* Connected to localhost (::1) port 54321 (#0)
+&gt; GET /ImportFiles.json?path=/nonexistent/file.txt HTTP/1.1
+&gt; User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0 OpenSSL/0.9.8x zlib/1.2.5
+&gt; Host: localhost:54321
+&gt; Accept: */*
+&gt; 
+* HTTP 1.0, assume close after body
+&lt; HTTP/1.0 200 OK 
+&lt; Content-Type: application/json
+&lt; Date: Fri, 28 Jun 2013 05:02:21 GMT
+&lt; 
+{ [data not shown]
+* Closing connection #0
+{
+    "error": "Argument path error: File /nonexistent/file.txt not found!"
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/top.html">Quick Start Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/videos.html">Quick Start Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professionalvideos/top.html">Concept Videos</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/top.html">Tutorial Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/videos.html">Tutorial Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide/top.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/top.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datascience/top.html">Data Science Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmarks/top.html">Benchmarks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../architecture/toprest.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programmingguide/toprest.html">REST (and JSON) Programming Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="toprest.html">REST (and JSON) API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">ImportFiles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#supported-http-methods-and-descriptions">Supported HTTP methods and descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#url">URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-parameters">Input parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-json-elements">Output JSON elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-json-elements">Error JSON elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#http-response-codes">HTTP response codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#success-example">Success Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-example">Error Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/topjava.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programmingguide/topjava.html">Java Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topjava.html">Java API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/top.html">Deployment</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/top.html">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto/top.html">HOWTO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="toprest.html"
+                        title="previous chapter">REST (and JSON) API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../architecture/topjava.html"
+                        title="next chapter">Architecture</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/api/ImportFiles.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../architecture/topjava.html" title="Architecture"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="toprest.html" title="REST (and JSON) API"
+             >previous</a> |</li>
+        <li><a href="../index.html">h2o 1.0 documentation</a> &raquo;</li>
+          <li><a href="toprest.html" >REST (and JSON) API</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, 0xdata, Inc.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
