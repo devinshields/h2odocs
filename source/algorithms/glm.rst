@@ -70,7 +70,7 @@ Generalized Linear Model (GLM)
 
    Defining a GLM model
 
-	Y: Your dependent variable.	X: Once you identify your dependent variable (the value you would like to predict) in the Y field, 	the X field will auto populate with all possible options (all of your other variables).  You select 	the subset of variables that you would like to use to predict with. 	Family and link:  Each of the given options differs in the assumptions made about the Y variable - the 	target of prediction. Each family is associated with a default link function, which defines the 	specialized transformation on the set of X variables chosen to predict Y. 	
+	Y: Your dependent variable.	X: Once you identify your dependent variable (the value you would like to predict) in the Y field, 	the X field will auto populate with all possible options (all of your other variables).  You select 	the subset of variables that you would like to use to predict with. 	Family and link:  Each of the given options differs in the assumptions made about the Y variable - the 	target of prediction. Each family is associated with a default link function, which defines the 	specialized transformation on the set of X variables chosen to predict Y. 	
 
 	Gaussian (identity): (Y) are quantitative, continuous (or continuous predicted values can be 			meaningfully interpreted), and expected to be normally distributed 
 
@@ -90,11 +90,12 @@ Generalized Linear Model (GLM)
 
    Interpreting a model
 
-	n: the number of observations (also called examples). Each observation is one row in your data. 	p: the number of estimated parameters. Each additional piece of information you ask H2O to estimate 		increases p by one.  	Degrees of Freedom: Null (total) is defined as (n-1) to account for the condition that the residuals 	must 	sum to zero. Residual is (n-1)- p : the null degrees of freedom less the number of parameters you 	are 	estimating in your model. 	Deviance: The difference between the predicted value and the observed value for each example or observation in the data. 
+	n: the number of observations (also called examples). Each observation is one row in your data.
+        p: the number of estimated parameters. Each additional piece of information you ask H2O to estimate 		increases p by one.  	Degrees of Freedom: Null (total) is defined as (n-1) to account for the condition that the residuals 	must 	sum to zero. Residual is (n-1)- p : the null degrees of freedom less the number of parameters you 	are 	estimating in your model. 	Deviance: The difference between the predicted value and the observed value for each example or observation in the data. 
 	
 	Null Deviance: associated with the full model 
-       Residual Deviance: associated with the reduced model
-	AIC: A model selection criterial that penalizes models having large numbers of predictors. AIC stands for 	Akiaike information criterion. It is defined as 	AIC = n ln SSEp - n ln n + 2p
+       Residual Deviance: associated with the reduced model
+	AIC: A model selection criterial that penalizes models having large numbers of predictors. AIC stands for 	Akiaike information criterion. It is defined as 	AIC = n ln SSEp - n ln n + 2p
 
        AUC: stands for Area Under Curve. The curve in question is the receiver operating characteristic curve. The criteria is a commonly used metric for evaluating the performance of classifier models. It gives the probability that a randomly chosen positive observation is correctly ranked greater than a randomly chosen negative observation. In machine learning, AUC is usually seen as the preferred evaluative criteria for a model (over accuracy) for classification models. This means that AUC is not an output for a Gaussian regression, but is output for classification models like binomial. 
 
