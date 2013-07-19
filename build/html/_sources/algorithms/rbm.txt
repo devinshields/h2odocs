@@ -1,4 +1,0 @@
-
-Restricted Boltzmann Machine
------------------------------
-

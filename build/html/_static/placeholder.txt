@@ -1,4 +1,0 @@
-
-This file lives in the source/_static directory to eliminate a sphinx build warning.
-Ignore it.
-

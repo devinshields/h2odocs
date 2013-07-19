@@ -1,2 +1,0 @@
-Cloud creation and destruction
-------------------------------
