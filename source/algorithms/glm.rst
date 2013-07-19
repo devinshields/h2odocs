@@ -64,7 +64,7 @@ Generalized Linear Model (GLM)
 
       4. Push Submit
 
-      5. The resulting column is a row by row match with the data submitted, giving a predicted value.
+      5. The resulting column is a row by row match with the data submitted, giving a predicted value. This output can be downloaded and saved as a .csv file. 
 
 
 
