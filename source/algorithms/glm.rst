@@ -2,37 +2,43 @@
 Generalized Linear Model (GLM)
 ------------------------------
 
-   When to use GLM
+When to use GLM 
+"""""""""""""""
 
-	The variable you are interested in making predictions or inferences about is a rate, an event, or a 	continuous measurement. Moreover, you are interested in seeing how a set of environmental conditions influence that variable. 
+The variable you are interested in making predictions or inferences
+about is a rate, an event, or a continuous measurement. Moreover, you
+are interested in seeing how a set of environmental conditions
+influence that variable.  Here are some examples:
 
-   Example
-	"What attributes make my customers distinct from the population as a whole?"
-   	"Given a set of specific manufacturing conditions, how many units produced will fail?"
-   	"What conditions most influence whether a client contacts our support service?"
+  "What attributes make my customers distinct from the population as a whole?"
+
+  "Given a set of specific manufacturing conditions, how many units produced will fail?"
+
+  "What conditions most influence whether a client contacts our support service?"
 
 
-   Quick step-by-step
+Quick step-by-step
+""""""""""""""""""
        
-      1. Import your data. Under the drop down menu "Data" choose from the options listed, and follow the import helper. To inspect your data for correct import, you can choose inspect from the same menu.  
+#. Import your data. Under the drop down menu "Data" choose from the options listed, and follow the import helper. To inspect your data for correct import, you can choose inspect from the same menu.  
 
-      2. Parse your data. Once data have been imported choose SUBMIT (a button on the page). Data will parse automatically, and when finished you will be automatically directed to a page that provides you with a hex key (a header at the top of the page reading "yourdata.hex"), and a frame of your data with summary statistics. 
+#. Parse your data. Once data have been imported choose SUBMIT (a button on the page). Data will parse automatically, and when finished you will be automatically directed to a page that provides you with a hex key (a header at the top of the page reading "yourdata.hex"), and a frame of your data with summary statistics. 
 
-      3. Specify a model. Either from the listed options at the top of the page displaying your parsed data or under the drop down menu "Model" select GLM. 
+#. Specify a model. Either from the listed options at the top of the page displaying your parsed data or under the drop down menu "Model" select GLM. 
 
-      4. Destination Key can be left blank and will be automatically generated, or can be named something intuitive at your discretion. 
+#. Destination Key can be left blank and will be automatically generated, or can be named something intuitive at your discretion. 
 
-      5. Key is required and is the "yourdata.hex" previously generated. 
+#. Key is required and is the "yourdata.hex" previously generated. 
 
-      6. Once your key has been correctly entered, specify a Y (dependent variable) using the drop down menu.
+#. Once your key has been correctly entered, specify a Y (dependent variable) using the drop down menu.
 
-      7. Once Y has been specified, that variable is removed from the list of possible X variables. From the list of X variables choose those relevant to your analysis by highlighting them. 
+#. Once Y has been specified, that variable is removed from the list of possible X variables. From the list of X variables choose those relevant to your analysis by highlighting them. 
 
-      8. Choose the appropriate family for the type of dependent variable you are predicting on. 
+#. Choose the appropriate family for the type of dependent variable you are predicting on. 
 
-      9. You have the option of specifying further turning parameters (lambda, alpha, or an alternative link function), however it is not necessary for the analysis to run, and can be left in default. 
+#. You have the option of specifying further turning parameters (lambda, alpha, or an alternative link function), however it is not necessary for the analysis to run, and can be left in default. 
 
-     10. N-folds allows you to specify the number of cross validation models you wish to generate; the default is 10.  
+#. N-folds allows you to specify the number of cross validation models you wish to generate; the default is 10.  
 
      Select SUBMIT, a button at the bottom of the model page in order to generate the model and associated output. For more detailed information on how to specify a model please see "Defining a GLM model" and "Expert settings".  
 
@@ -40,80 +46,100 @@ Generalized Linear Model (GLM)
       
       To score a model: 
      
-      1. import and parse a testing data set composed of the same predictor variables that were utilized in building the original model 
+#. Import and parse a testing data set composed of the same predictor variables that were utilized in building the original model 
 
-      2. Under the drop down menu Score select GLM
+#. Under the drop down menu Score select GLM
 
-      3. In model key enter the key generated when you originally ran your model. If you do not know the key, you can find it under the Admin menu by selecting "Jobs" and then select the correct model from the list 
+#. In model key enter the key generated when you originally ran your model. If you do not know the key, you can find it under the Admin menu by selecting "Jobs" and then select the correct model from the list 
 
-      4. In hex key enter the key generated for your testing data set. 
+#. In hex key enter the key generated for your testing data set. 
 
-      5. Adjust thresholds if needed (for binomial models)
+#. Adjust thresholds if needed (for binomial models)
 
-      6. Push "submit"
+#. Push "submit"
 
       Notes on scoring: Model scoring is used to test the predictive ability of the generated model. In general, given 100% of the available data, a training set (the data used to build the predictive model) consists of 90% of the data, and the testing set consists of 10%. The model score is generated by comparing predicted values to the actual values and calculating a rate of correct predictions. 
 
       Predicting
  
-      1. Parse the data on which you would like to predict. Note that this data should have the same variables as those used in generating the model to be applied. 
+#. Parse the data on which you would like to predict. Note that this data should have the same variables as those used in generating the model to be applied. 
 
-      2. Under the drop down menu Score select Predict
+#. Under the drop down menu Score select Predict
    
-      3. Enter the destination key for your model (which can be found under Jobs in the Admin drop down menu if needed), and the .hex key for the data to be predicted on. 
+#. Enter the destination key for your model (which can be found under Jobs in the Admin drop down menu if needed), and the .hex key for the data to be predicted on. 
 
-      4. Push Submit
+#. Push Submit
 
-      5. The resulting column is a row by row match with the data submitted, giving a predicted value. This output can be downloaded and saved as a .csv file. 
+#. The resulting column is a row by row match with the data submitted, giving a predicted value. This output can be downloaded and saved as a .csv file. 
 
 
 
-   Defining a GLM model
+Defining a GLM model
+""""""""""""""""""""
 
-	Y: Your dependent variable.	X: Once you identify your dependent variable (the value you would like to predict) in the Y field, 	the X field will auto populate with all possible options (all of your other variables).  You select 	the subset of variables that you would like to use to predict with. 	Family and link:  Each of the given options differs in the assumptions made about the Y variable - the 	target of prediction. Each family is associated with a default link function, which defines the 	specialized transformation on the set of X variables chosen to predict Y. 	
-
-	Gaussian (identity): (Y) are quantitative, continuous (or continuous predicted values can be 			meaningfully interpreted), and expected to be normally distributed 
-
-	Binomial (logit): dependent variables take on two values, traditionally coded as 0 and 1, and follow a 		binomial distribution, can be understood as a categorical Y with two possible outcomes
-
-	Poisson  (log): dependent variable is a count - a quantitative, discrete value that expresses the 		number of times some event occurred
-
-	Gamma  (inverse): dependent variable is a survival measure
-
-	Lambda: H2O provides a default value, but this can also be user defined. Lambda is a regularization 		parameter that is designed to prevent overfitting. The best value(s) of lambda depends on the degree 	to 	which you wish the variance of the cross validated coefficients to match.
-
-	Alpha:   A user defined tuning regularization parameter that H2O sets to 0.5 by default, but which can 	take 	any value between 0 and 1, inclusive.  It functions so that there is an added penalty taken against the 	estimated fit of the model as the number of parameters increases. An alpha of 1 is the 	lasso penalty, and an 	alpha of 0 is the ridge penalty.
-
-      Weight: Allows the user to specify consideration given to observations based on the observed Y value. Weight=1 is neutral. Weight = 0.5 treats negative examples as twice more important than positive ones. Weight = 2.0 does the opposite.
-
-      Case and Casemode are used in combination, where a threshold value in the Y variable can be specified, and the model can be asked to predict for observations above, below, or equal to this value. Used in binomial prediction, where the default case is the mean of the Y column.  
-
-   Interpreting a model
-
-	n: the number of observations (also called examples). Each observation is one row in your data.
-        p: the number of estimated parameters. Each additional piece of information you ask H2O to estimate 		increases p by one.  	Degrees of Freedom: Null (total) is defined as (n-1) to account for the condition that the residuals 	must 	sum to zero. Residual is (n-1)- p : the null degrees of freedom less the number of parameters you 	are 	estimating in your model. 	Deviance: The difference between the predicted value and the observed value for each example or observation in the data. 
+  Y: Your dependent variable (DV).
 	
-	Null Deviance: associated with the full model 
-       Residual Deviance: associated with the reduced model
-	AIC: A model selection criterial that penalizes models having large numbers of predictors. AIC stands for 	Akiaike information criterion. It is defined as 	AIC = n ln SSEp - n ln n + 2p
+  X: Once you identify your dependent variable (the value you would like to predict) in the Y field, the X field will auto populate with all possible options (all of your other variables).  You select the subset of variables that you would like to use to predict with. Family and link:  Each of the given options differs in the assumptions made about the Y variable - the target of prediction. Each family is associated with a default link function, which defines the specialized transformation on the set of X variables chosen to predict Y. 	
 
-       AUC: stands for Area Under Curve. The curve in question is the receiver operating characteristic curve. The criteria is a commonly used metric for evaluating the performance of classifier models. It gives the probability that a randomly chosen positive observation is correctly ranked greater than a randomly chosen negative observation. In machine learning, AUC is usually seen as the preferred evaluative criteria for a model (over accuracy) for classification models. This means that AUC is not an output for a Gaussian regression, but is output for classification models like binomial. 
+  Gaussian (identity): (Y) are quantitative, continuous (or continuous predicted values can be meaningfully interpreted), and expected to be normally distributed 
 
-      Confusion Matrix: the accuracy of the classifier can be evaluated from the confusion matrix, which reports actual versus predicted classifications, and the error rates of both.
+  Binomial (logit): dependent variables take on two values, traditionally coded as 0 and 1, and follow a binomial distribution, can be understood as a categorical Y with two possible outcomes
 
-   Expert Settings
-      
-      Expert settings can be accessed by checking the tic box at the bottom of the model page. 
+  Poisson (log): dependent variable is a count - a quantitative, discrete value that expresses the number of times some event occurred
 
-      Standardize is an option that transforms your variables into standardized variables, each with mean 0 and unit variance. Variables and coefficients are now expressed in terms of their relative position to 0, and have standard units. 
+  Gamma (inverse): dependent variable is a survival measure
 
-      Threshold is an option only for binomial models that allows the user to define the degree to which they prefer to weight the sensitivity (the proportion of correctly classified 1s) and specificity (the proportion of correctly classified 0s). The default option is joint optimization for the overall classification rate. Changing this will alter the confusion matrix and the AUC. 
+  Lambda: H2O provides a default value, but this can also be user defined. Lambda is a regularization parameter that is designed to prevent overfitting. The best value(s) of lambda depends on the degree to which you wish the variance of the cross validated coefficients to match
 
-      LSM solver: LSM stands for Least Squares Method. Least squares is the optimization criterion for the model residuals. 
+  Alpha: A user defined tuning regularization parameter that H2O sets to 0.5 by default, but which can take any value between 0 and 1, inclusive.  It functions so that there is an added penalty taken against the estimated fit of the model as the number of parameters increases. An alpha of 1 is the lasso penalty, and an alpha of 0 is the ridge penalty.
 
-      Beta epsilon: Precision of the vector of coefficients. Computation stops when the maximal difference between two beta vectors is below than Beta epsilon
+   Weight: Allows the user to specify consideration given to observations based on the observed Y value. Weight=1 is neutral. Weight = 0.5 treats negative examples as twice more important than positive ones. Weight = 2.0 does the opposite.
+
+  Case and Casemode are used in combination, where a threshold value in the Y variable can be specified, and the model can be asked to predict for observations above, below, or equal to this value. Used in binomial prediction, where the default case is the mean of the Y column.  
+
+Interpreting a Model
+""""""""""""""""""""
+
+  n: the number of observations (also called examples). Each observation is one row in your data.
+
+  p: the number of estimated parameters. Each additional piece of information you ask H2O to estimate increases p by one. Degrees of Freedom: Null (total) is defined as (n-1) to account for the condition that the residuals 	must sum to zero. Residual is (n-1)- p : the null degrees of freedom less the number of parameters you are estimating in your model. Deviance: The difference between the predicted value and the observed value for each example or observation in the data. 
+	
+  Null Deviance: associated with the full model
+ 
+  Residual Deviance: associated with the reduced model
+
+  AIC: A model selection criterial that penalizes models having large numbers of predictors. AIC stands for 	Akiaike information criterion. It is defined as 	AIC = n ln SSEp - n ln n + 2p
+
+  AUC: stands for Area Under Curve. The curve in question is the receiver operating characteristic curve. The criteria is a commonly used metric for evaluating the performance of classifier models. It gives the probability that a randomly chosen positive observation is correctly ranked greater than a randomly chosen negative observation. In machine learning, AUC is usually seen as the preferred evaluative criteria for a model (over accuracy) for classification models. This means that AUC is not an output for a Gaussian regression, but is output for classification models like binomial. 
+
+Confusion Matrix: the accuracy of the classifier can be evaluated from the confusion matrix, which reports actual versus predicted classifications, and the error rates of both.
+
+Expert Settings
+"""""""""""""""      
+  Expert settings can be accessed by checking the tic box at the bottom of the model page. 
+
+  Standardize is an option that transforms your variables into standardized variables, each with mean 0 and unit variance. Variables and coefficients are now expressed in terms of their relative position to 0, and have standard units. 
+
+  Threshold is an option only for binomial models that allows the user to define the degree to which they prefer to weight the sensitivity (the proportion of correctly classified 1s) and specificity (the proportion of correctly classified 0s). The default option is joint optimization for the overall classification rate. Changing this will alter the confusion matrix and the AUC. 
+
+  LSM solver: LSM stands for Least Squares Method. Least squares is the optimization criterion for the model residuals. 
+
+  Beta epsilon: Precision of the vector of coefficients. Computation stops when the maximal difference between two beta vectors is below than Beta epsilon
+
+Validate GLM 
+"""""""""""""
+
+  After running the GLM Model, a .hex key for your model will be generated.
+
+#.  Select the "Validate on Another Dataset" option in the horizontal menu at the top of your results page. You can also access this at a later time by going to the drop down menu "Score" and selecting GLM.
+
+#.  In the validation generation page enter the .hex key for the model you wish to validate in the model key field.
+
+#.  In the key field enter the .hex for a testing data set matching the structure of your training data set. 
+
+#.  Push the Submit button. 
 
    
-   References: https://github.com/0xdata/h2o/wiki/References-and-Suggested-Reading
+  References: https://github.com/0xdata/h2o/wiki/References-and-Suggested-Reading
 	
 
