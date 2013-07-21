@@ -2,6 +2,10 @@
 Generalized Linear Model (GLM)
 ------------------------------
 
+GLM comprises several, flexible algorithms. Each serves a different
+purpose. Depending on your regression of choice, it can be used either 
+for prediction or classification.
+
 When to use GLM 
 """""""""""""""
 
@@ -42,7 +46,9 @@ Quick step-by-step
 
      Select SUBMIT, a button at the bottom of the model page in order to generate the model and associated output. For more detailed information on how to specify a model please see "Defining a GLM model" and "Expert settings".  
 
-   Scoring and predicting
+  
+Scoring and predicting
+""""""""""""""""""""""
       
       To score a model: 
      
