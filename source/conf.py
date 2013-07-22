@@ -33,6 +33,27 @@ templates_path = ['_templates']
 # The suffix of source filenames.
 source_suffix = '.rst'
 
+#themes
+html_theme = "default"
+html_theme_options = {
+    "footerbgcolor": "black",
+    "footertextcolor": "yellow",
+    "sidebarbgcolor": "yellow",
+    "sidebartextcolor": "black",
+    "sidebarlinkcolor": "black",
+    "stickysidebar":"true",
+    "relbarbgcolor": "black",
+    "relbartextcolor": "yellow",
+    "relbarlinkcolor": "yellow",
+    "headtextcolor":"black",
+    "headlinkcolor":"black",
+    "textcolor":"black",
+    "linkcolor":"black",
+    "codetextcolor":"black",
+    "bodyfont":"HelveticaNeue-Light",
+    "bgcolor":"white"
+}
+
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
@@ -40,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'h2o'
+project = u'H2O'
 copyright = u'2013, 0xdata, Inc'
 
 # The version info for the project you're documenting, acts as replacement for
