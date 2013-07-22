@@ -7,7 +7,7 @@ K-Means falls in the general category of clustering algorithms.
 When to use K-Means
 """""""""""""""""""
 
-There is a population you are interested in characterizing, and you have a set of attributes on which the members of this population likely differ.  Here are some examples:
+There is a population you are interested in characterizing, and you have a set of attributes on which the members of this population likely differ. Here are some examples:
 
   "How do my competitors differ from one another on critical dimensions?"
 
