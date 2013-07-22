@@ -52,3 +52,38 @@ To score a model:
 
 #. Press submit.  
 
+
+Defining a K Means model
+""""""""""""""""""""""""
+
+Source key: the .hex key associated with the data set you would like to cluster
+
+K: the number of clusters the data are to be divided into. There is no set rule or formula for defining K, it is up to the user and is often based on heuristics. 
+
+Max iter: the maximum number of iterations the algorithm is to go through if no stopping point is reached before. 
+
+Epsilon: A user defined parameter such that if the movement of cluster centers to an
+improved position is less than epsilon, the algorithm stops. The purpose of the epsilon
+tuning parameter is to allow the user to determine at what point small marginal
+improvements in the model are not of additional information value to the user.
+
+Seed: A starting point for randomization.
+
+Normalize: An option that allows you to center the mean of each varialbe at 0, and 
+scale by the standard deviation. 
+
+Cols: The columns from the data set that contain the attributes on which observations
+are to be clustered.
+
+
+Interpreting a Model
+""""""""""""""""""""
+
+Output from K Means is a table with one more column than the number of attributes
+used to cluster. The the names of attributes, and "cluster" appear in the header row.
+The column cluster gives an arbitrary number to each cluster built, and the attributes 
+give the coordinates of the center of that cluster. 
+
+ 
+
+
