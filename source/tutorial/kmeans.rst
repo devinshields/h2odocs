@@ -1,11 +1,11 @@
 K Means Tutorial
-""""""""""""""""
+-----------------
 
 The purpose of this tutorial is to walk the new user through a 
-K-means analysis beginning to end. By the end of this tutorial
-you should know how to specify, run and interpret a K-means model.
+K-Means analysis beginning to end. By the end of this tutorial
+the user should know how to specify, run, and interpret a K-means model.
 
-If you have never used H2O before, please see the quickstart guide
+Those who have never used H2O before should see the quick start guide
 for how to run H2O on your computer. 
 
 Getting Started
@@ -14,41 +14,46 @@ Getting Started
 This tutorial uses a publicly available data set that can be found 
 
 ::
-  $ Seeds data set http://archive.ics.uci.edu/ml/datasets/seeds 
+  Seeds data set http://archive.ics.uci.edu/ml/datasets/seeds 
 
-The data are composed of 210 observations, 7 attributes, and an priori grouping assignment. All data are positively valued and continuous. Before modeling, parse data into H20 as follows:
+The data are composed of 210 observations, 7 attributes, and an priori grouping assignment. All data are positively valued and continuous. Before modeling, parse data into H2as follows:
 
-#. Under the drop down menu "Data" select Upload and use the helper to upload your data. 
-#. When data are uploaded you will be directed to a page with the header "Request Parse".  All settings can be left in default, but double check that your first row is a header row before leaving that option selected. Press Submit. 
+#. Under the drop down menu Data select Upload and use the helper to
+   upload data.
+ 
+#. After uploading page is redirected to a page with the header
+   "Request Parse". Select whether the first row of the data set is a
+   header as appropriate.  All settings can be left in default. Press
+   Submit. 
 
-#. Pressing Submit parses your data into H2O and generates a .hex key (data name.hex).
+#. Parsing data into H2O generates a .hex key ("data name.hex").
 
-.. image::
-  ..KMparse.png
+.. image:: KMparse.png
 
 
 Building a Model
 """"""""""""""""
 
-#. Once your data are parsed a horizontal menu will appear at the top
-   of the screen reading "Build model using ... ". You can select 
-   K Means here, or you can go to the drop down menu "Model" and
-   select K Means there.
+#. Once  data are parsed a horizontal menu will appear at the top
+   of the screen reading "Build model using ... ". Select 
+   K Means here, or go to the drop down menu "Model" and
+   find K-Means there.
 
-#. In the field for Source Key enter the .hex key generated when you
-   parsed your data. 
+#. In the field for Source Key enter the .hex key generated when data
+   were parsed. 
 
-#. Choose your number of K. There is no hard and fast rule for how to
-   do this. For this dataset we will choose 3 clusters. 
+#. Choose K. There is no hard and fast rule for how to
+   do this. For this dataset K is chosen to be 3. 
 
-#. Note that you can normalize, though we will not do so here. 
+#. Note that data can be normalized, though it is not done for this analysis. 
 
 #. Max iter and Epsilon are both user defined tuning parameters that
    control the modeling process. Max iter allows the user to specify
    the maximum number of iterations the algorithm processes. Epsilon 
    specifies a threshold for the movement between one set of
    cluster centers and the next. If the new center moves less than
-   epsilon, the algorithm terminates. 
+   epsilon, the algorithm terminates. Both accomplish the same ends
+   through different means. Leave both in default for this analysis.
 
 #. Cols is a list of the columns of attributes that should be used 
    in defining the clusters. Here we select all but column 7 (the 
@@ -62,7 +67,7 @@ Building a Model
 K-Means Output
 """"""""""""""
 
-The output is a matrix of the cluster assignments, and the
+Output is a matrix of the cluster assignments, and the
 coordinates of the cluster centers in terms of the originally 
 chosen attributes. Your cluster centers may differ slightly. 
 K-Means randomly chooses starting points and converges on 
@@ -75,7 +80,7 @@ K-means Score
 """""""""""""
 
 For further information on the model select K-Means from the
-drop down menu Score. Specify the K means model key, and the 
+drop down menu Score. Specify the K-Means model key, and the 
 .hex key for the data set originally used. 
 
 .. image:: KMrscore.png
@@ -101,4 +106,5 @@ When this was done, a less than 10% error rate was found.
 
 .. image:: KMapply.png
 
- 
+
+THE END.  
