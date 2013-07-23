@@ -14,7 +14,7 @@ Getting Started
 This tutorial uses a publicly available data set that can be found 
 
 ::
- 'here<archive.ics.uci.edu/ml/datasets/seeds>'
+  $ Seeds data set http://archive.ics.uci.edu/ml/datasets/seeds 
 
 The data are composed of 210 observations, 7 attributes, and an priori grouping assignment. All data are positively valued and continuous. Before modeling, parse data into H20 as follows:
 
@@ -24,7 +24,7 @@ The data are composed of 210 observations, 7 attributes, and an priori grouping 
 #. Pressing Submit parses your data into H2O and generates a .hex key (data name.hex).
 
 .. image::
-  ..tutorial/KMparse.png
+  ..KMparse.png
 
 
 Building a Model
@@ -56,8 +56,7 @@ Building a Model
 
 #. Press submit.
 
-.. image::
-  ..tutorial/KMrequest.png
+.. image:: KMrequest.png
 
 
 K-Means Output
@@ -70,8 +69,7 @@ K-Means randomly chooses starting points and converges on
 optimal centroids. The cluster number is arbitrary, and should
 be thought of as a factor. 
 
-.. image::
-  ..tutorial/KMinspect.png 
+.. image:: KMinspect.png 
 
 K-means Score
 """""""""""""
@@ -80,14 +78,12 @@ For further information on the model select K-Means from the
 drop down menu Score. Specify the K means model key, and the 
 .hex key for the data set originally used. 
 
-.. image::
-  ..tutorial/KMrscore.png
+.. image:: KMrscore.png
 
 The output obtained when submit is pressed is the number of rows 
 assigned to each cluster, and the squared error per cluster. 
 
-.. image::
-  ..tutorial/KMscore.png
+.. image:: KMscore.png
 
 K-means Apply
 """""""""""""
@@ -103,7 +99,6 @@ researched that we know cluster assignments in advance we are able
 to compare the assigned cluster with the actual cluster. 
 When this was done, a less than 10% error rate was found. 
 
-.. image::
-  ..tutorial/KMapply.png
+.. image:: KMapply.png
 
  
