@@ -3,12 +3,12 @@ From source code (Github)
 
 These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
-#. Create a git clone of the H2O repository.
+1. Create a git clone of the H2O repository.
  ::
- $ git clone https://github.com/0xdata/h2o.git
+  git clone https://github.com/0xdata/h2o.git
 
 
-#. Build H2O from source.  You must have Java JDK 1.6 or higher.
+2. Build H2O from source.  You must have Java JDK 1.6 or higher.
     After the build finishes, some JUnit tests will run automatically.
 
  ::
@@ -39,7 +39,7 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
 |
  
-#.  The build produces target/h2o.jar.  Now run h2o.jar from the command line.
+3.  The build produces target/h2o.jar.  Now run h2o.jar from the command line.
 Note that Xmx is the amount of memory given to H2O. If your data set is large,
 increase the number immediately following Xmx from the default of 2. As a rule,
 the amount of memory given should be about 4 times the size of your data, but no 
@@ -58,5 +58,5 @@ larger than the total memory of your computer.
 	03:45:42.053 main      INFO WATER: Cloud of size 1 formed [/10.197.32.113:54321]
 
 
-#. Point your web browser to the HTTP URL (``http://your-ip-address:54321``);
+4. Point your web browser to the HTTP URL (``http://your-ip-address:54321``);
 H2O will run from there.  

@@ -10,13 +10,9 @@ level of consensus among all of the trees.
 
 When to use RF
 """"""""""""""
+RF is a good choice When you are interested in determining the critical attributes or features of a data set, you wish to better understand segments within yourdata set, or when your analytical objective is clustering. Here are some examples
 
-RF is a good choice When you are interested in determining the critical attributes or 
-features of a data set, you wish to better understand segments within your data set, 
-or when your analytical objective is clustering. Here are some examples
-
-  "There are 1000 variables in this data set. Of those, which most charactarize differences 
-between one observation and another with respect to the desired outcome variable?"
+  "There are 1000 variables in this data set. Of those, which most charactarize differences between one observation and another with respect to the desired outcome variable?"
 
   "Given a large set of observations and attributes, the goal is to classify observations by spending habits."
 
