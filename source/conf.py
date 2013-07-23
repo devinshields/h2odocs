@@ -34,14 +34,14 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 #themes
-html_theme = "default"
+# html_theme = "default"
 html_theme_options = {
     "footerbgcolor": "black",
     "footertextcolor": "yellow",
-    "sidebarbgcolor": "yellow",
-    "sidebartextcolor": "black",
-    "sidebarlinkcolor": "black",
-    "stickysidebar":"true",
+    "sidebarbgcolor": "black",
+    "sidebartextcolor": "yellow",
+    "sidebarlinkcolor": "yellow",
+#    "stickysidebar":"true",
     "relbarbgcolor": "black",
     "relbartextcolor": "yellow",
     "relbarlinkcolor": "yellow",
