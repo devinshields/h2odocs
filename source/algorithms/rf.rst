@@ -1,6 +1,6 @@
 
 Random Forest (RF)
--------------
+------------------
 
 RF is a powerful classificaiton tool. When given a set of data, RF
 gererates a forest of classification trees, rather than a single classification 
