@@ -39,6 +39,9 @@ set and the training set. Split your data appropriately and parse them
 both now. 
 
 .. image:: GLMparse.png
+   :width: 100 %
+
+After parsing:
 
 .. image:: GLMparse2.png
 
@@ -48,26 +51,38 @@ Building a Model
 #. Destination key will be automatically generated, but the user can
    define a different name. 
 
+
 #. In the key field enter the .hex key for the training data set. 
 
+
 #. In the Y field select the column associated  with the Whole Weight variable. 
+
 
 #. In the X field select the columns associated with Sex, Length,
    Diameter, Height, and Rings. 
 
+
 #. Specify Family to be Gaussian, which automatically sets the link
    field to identity. 
+
 
 #. Leave lambda and alpha at default (to find detailed information on the
    specificaiton of tuning parameters see the user guide under
    algorithms in the documentation menu). 
 
+
 #. Leave n-folds at 10. 
+
 
 #. Select the box marked expert settings, and turn standardization
    OFF. 
 
+
 .. image:: GLMrequest.png
+
+
+
+
 
 .. image:: GLMrequest2.png
 
