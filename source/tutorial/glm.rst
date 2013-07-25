@@ -2,9 +2,8 @@ GLM Tutorial
 ------------
 
 The purpose of this tutorial is to walk the new user through 
-a GLM analysis beginning to end. Those who have never used 
-H2O before should knwo how to specify, run, and interpret 
-a GLM model. 
+a GLM analysis beginning to end. The objective is to  learn how to
+specify, run, and interpret a GLM model. 
 
 Those who have never used H2O before should see the quickstart quide
 for additional instructions on how to run H2O.
@@ -22,7 +21,7 @@ The original data are composed of 4177 observations and 7 attributes,
 and have been split into 90%/10% train/ test sets through random
 assignment. All attributes are real valued continuous, except for Sex
 and Rings. Sex is categorical with 3 levels (male, female, and infant),
-and Rings are discrete. 
+and Rings is discrete. 
 
 Before modeling, parse data into H2O as follows:
 
@@ -91,27 +90,36 @@ Building a Model
    :width: 100%
 
 
-Additional specification
+
+
+Additional specification detail
+
+
+
 
 
 .. image:: GLMrequest2.png
    :width: 100%
 
 
+
+
 GLM Results
 """""""""""
 
-GLM output includes coefficients (and normalized coefficients when
-standardization is requested as well). Also reported are the AIC and
-the error rate. A specification of the model is printed across the top
+GLM output includes coefficients (as well as normalized coefficients when
+standardization is requested). Also reported are AIC and
+error rate. A specification of the model is printed across the top
 of the GLM results page in red. 
 
 Users should note that if they wish to replicate results between H2O
 and R, it is recommended that standardization and cross validation
 either be turned off in H2O, or specified in R. 
 
+
 .. image:: GLMoutput.png
    :width: 100%
+
 
 
 Validating on Testing Set
