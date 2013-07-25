@@ -58,7 +58,7 @@ For a fully worked example see Tutorials.
 
 #. Seed remains constant for each instance of H2O, allowing the user
    to recreate models by consistently specifying randomized components
-   of the algorithim. 
+   of the algorithm. 
 
 
 #. Normalize scales data by standard deviation and mean centers at 0. 
