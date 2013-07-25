@@ -98,28 +98,32 @@ RF results of initial interest are comprised of a model key and a confusion matr
 
 The confusion matrix is formatted like this:
 
-+---------------------------------------------------+
++------------------+-----------+---------+----------+
 | Actual/Predicted |  Class A  | Class B |   Error  |
-|                  |           |         |          |
-+===================================================+
++==================+===========+=========+==========+
 | Class A          |    a      |    b    |     e    |
-|                  |           |         |          |
-+---------------------------------------------------+
++------------------+-----------+---------+----------+
 | Class B          |    c      |    d    |     f    |
-|                  |           |         |          |
-+---------------------------------------------------+
++------------------+-----------+---------+----------+
 | Totals           |    g      |    h    |     i    |
-|                  |           |         |          |
-+---------------------------------------------------+
++------------------+-----------+---------+----------+
 
 a = the number of correct predictions of class a
+
 b = the number of incorrect predictions of class a
+
 c = the number of incorrect predictions of class b
+
 d = the number of correct predictions of class b
+
 e = incorrect class A predictions/ total in class A
+
 f = incorrect in class B predictions/ total in class B
+
 g = total of class A column 
+
 h = total of class B column
+
 i = total incorrect predictions/total observations
  
  
