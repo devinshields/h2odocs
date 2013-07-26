@@ -121,7 +121,7 @@ K-means Apply
 
 To generate a prediction (assign the observations in a data set
 to a cluster) select K-means Apply from the Score drop down menu.
-Specify the model you wish to apply and the .hex for the data 
+Specify the model to be applied and the  .hex for the data 
 you would like to apply it to, and press submit. 
 
 Here cluster assignments have been generated

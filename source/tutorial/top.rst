@@ -7,4 +7,4 @@ Tutorial Documentation
 
    glm
    kmeans
-
+   rf

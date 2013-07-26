@@ -18,7 +18,7 @@ This tutorial uses a publicly available data set that can be found
 
 
 The original data are composed of 4177 observations and 7 attributes,
-and have been split into 90%/10% train/ test sets through random
+and have been split into .90/.10 train/ test sets through random
 assignment. All attributes are real valued continuous, except for Sex
 and Rings. Sex is categorical with 3 levels (male, female, and infant),
 and Rings is discrete. 
