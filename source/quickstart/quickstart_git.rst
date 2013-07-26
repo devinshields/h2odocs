@@ -6,7 +6,7 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 1. Create a git clone of the H2O repository.
 
  ::
-
+  
   git clone https://github.com/0xdata/h2o.git
 
 
