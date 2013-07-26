@@ -38,9 +38,9 @@ source_suffix = '.rst'
 html_theme_options = {
     "footerbgcolor": "black",
     "footertextcolor": "yellow",
-    "sidebarbgcolor": "black",
-    "sidebartextcolor": "yellow",
-    "sidebarlinkcolor": "yellow",
+    "sidebarbgcolor": "#FBE91F",
+    "sidebartextcolor": "black",
+    "sidebarlinkcolor": "black",
 #    "stickysidebar":"true",
     "relbarbgcolor": "black",
     "relbartextcolor": "yellow",
