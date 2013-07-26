@@ -2,20 +2,12 @@
 User Guide
 ==============
 
-Starting H2O (command-line options)
-------------------------------------
+.. toctree::
+   :maxdepth:2
 
-Ingesting data
---------------
-
-Parsing data
-------------
-
-Creating models
----------------
-
-Scoring
--------
-
-Console
--------
+   data
+   model
+   score
+   admin
+   
+   

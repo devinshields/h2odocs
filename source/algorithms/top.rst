@@ -8,6 +8,6 @@ Algorithms
    glm
    kmeans
    rf
-   gbm
-   rbm
+   
+ 
 
