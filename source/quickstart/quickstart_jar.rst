@@ -56,11 +56,11 @@ Useful Notes
 
 First time users may need to download and install Java
 in order to run H2O. The program is available free on the web, 
-and can be quickly installed. Even though you will use java to 
+and can be quickly installed. Even though you will use Java to 
 run H2O, no programming is necessary. 
 
-In the java command entered into the terminal the term -Xmx1g was 
-used. Xmx is the amount of memory given to H2O.  If your data set is large,
+In the Java command entered the term -Xmx1g was used. Xmx is the
+amount of memory given to H2O.  If your data set is large,
 give H2O more memory (for example, -Xmx4g gives H2O four gigabytes of
 memory).  For best performance, Xmx should be 4x the size of your
 data, but never more than the total amount of memory on your

@@ -15,11 +15,12 @@ Getting Started
 This tutorial uses a publicly available data set that can be found 
 
 ::
+
   Internet ads data set http://archive.ics.uci.edu/ml/machine-learning-databases/internet_ads/ 
 
 The data are composed of 3279 observations, 1557 attributes, and an
 priori grouping assignment. The objective is to build a prediction
-tool to detect whether an object is an internet ad or not.
+tool that predicts whether an object is an internet ad or not.
  
 
 #. Under the drop down menu Data select Upload and use the helper to
@@ -90,7 +91,7 @@ RF Output
 """""""""
 
 
-The RF output of principal interest is a confusion matrix detailing
+The RF output of main interest is a confusion matrix detailing
 the classification error rates for each level in the range of the
 target variable. In addition to the confusion matrix, the overall
 classification error, the number of trees and data use descriptives

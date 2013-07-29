@@ -52,7 +52,15 @@ a format that H2O can process. Converting the data to an H2O usable
 format is called parsing. 
 
 After ingestion users are directed to a Request Parse screen. To parse
-data 
+data users can leave most options in default. For example, H2O
+automatically determines separators in data sets. For most data
+formats users will be automatically redirected to a page to request
+parse, where they can simply press submit. Execptions to this are
+noted below. Once data are parsed a .hex key is displayed for the
+user. This .hex key will be used to refer to the data set in all H2O
+analysis, and should be noted. It can also be found at a later time
+through the Admin menu by selecting Jobs, or through the Data menu, by
+choosing View All.  
 
 Import URL: Click on " Parse into .hex format" displayed at the top of the
 inspect page after data are inhaled. 

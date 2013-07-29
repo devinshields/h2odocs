@@ -14,6 +14,7 @@ Getting Started
 This tutorial uses a publicly available data set that can be found 
 
 ::
+
   Seeds data set http://archive.ics.uci.edu/ml/datasets/seeds 
 
 
@@ -96,6 +97,7 @@ The exact model can be reproduced by entering the same seed as was
 originally used. This seed is 
 
 ::
+
  -5953344057862169010
 
 
@@ -113,7 +115,7 @@ The output obtained when submit is pressed is the number of rows
 assigned to each cluster, and the squared error per cluster. 
 
 .. image:: KMscore.png
-   :width: 100%
+   :width: 90%
 
 
 K-means Apply
