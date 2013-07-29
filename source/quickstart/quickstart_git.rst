@@ -22,6 +22,7 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
 ::
 
+
   PROJECT_VERSION is 99.99.99.99999
   make build PROJECT_VERSION=99.99.99.99999
   make build_h2o PROJECT_VERSION=99.99.99.99999
@@ -47,28 +48,42 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
   mkdir target
   make build_inner HADOOP_VERSION=mapr2.1.3
   mkdir classes/mapr2.1.3
-  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/mapr2.1.3/hadoop-0.20.2-dev-core.jar" -d classes/mapr2.1.3 src/main/java/water/hadoop/*.java
+  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath 
+  "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/mapr2.1.3/hadoop-0.20.2-dev-core.jar" 
+  -d classes/mapr2.1.3 src/main/java/water/hadoop/*.java
   warning: [options] bootstrap class path not set in conjunction with -source 1.6
   1 warning
   jar cf target/h2odriver_mapr2.1.3.jar -C classes/mapr2.1.3 .
   make build_inner HADOOP_VERSION=cdh3
   mkdir classes/cdh3
-  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh3/hadoop-core-0.20.2-cdh3u6.jar" -d classes/cdh3 src/main/java/water/hadoop/*.java
+  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath 
+  "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh3/hadoop-core-0.20.2-cdh3u6.jar" -d
+  classes/cdh3 src/main/java/water/hadoop/*.java
   warning: [options] bootstrap class path not set in conjunction with -source 1.6
   1 warning
   jar cf target/h2odriver_cdh3.jar -C classes/cdh3 .
   make build_inner HADOOP_VERSION=cdh4
   mkdir classes/cdh4
-  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh4/hadoop-common.jar:../lib/hadoop/cdh4/hadoop-mapreduce-client-core-2.0.0-cdh4.2.0.jar" -d classes/cdh4 src/main/java/water/hadoop/*.java
+  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath 
+  "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh4/hadoop-common.jar:../
+  lib/hadoop/cdh4/hadoop-mapreduce-client-core-2.0.0-cdh4.2.0.jar" -d
+  classes/cdh4 src/main/java/water/hadoop/*.java
   warning: [options] bootstrap class path not set in conjunction with -source 1.6
-   ../lib/hadoop/cdh4/hadoop-common.jar(org/apache/hadoop/fs/Path.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate': class file for org.apache.hadoop.classification.InterfaceAudience not found
+   ../lib/hadoop/cdh4/hadoop-common.jar(org/apache/hadoop/fs/Path.class):
+   warning: Cannot find annotation method 'value()' in type
+   'LimitedPrivate': class file for
+   org.apache.hadoop.classification.InterfaceAudience not found
   Note: src/main/java/water/hadoop/h2odriver.java uses or overrides a deprecated API.
   Note: Recompile with -Xlint:deprecation for details.
   2 warnings
   jar cf target/h2odriver_cdh4.jar -C classes/cdh4 .
   make build_inner HADOOP_VERSION=cdh4_yarn
   mkdir classes/cdh4_yarn
-  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh4_yarn/common/hadoop-common-2.0.0-cdh4.3.0.jar:../lib/hadoop/cdh4_yarn/mapreduce2/hadoop-mapreduce-client-core-2.0.0-cdh4.3.0.jar" -d classes/cdh4_yarn src/main/java/water/hadoop/*.java
+  javac -source 1.6 -target 1.6 -sourcepath src/main/java -classpath
+  "../lib/log4j/log4j-1.2.15.jar:../target/h2o.jar:../lib/hadoop/cdh4_yarn/common/
+  hadoop-common-2.0.0-cdh4.3.0.jar:../lib/hadoop/cdh4_yarn/mapreduce2/hadoop-mapreduce-client-
+  core-2.0.0-cdh4.3.0.jar" -d
+  classes/cdh4_yarn src/ main/java/water/hadoop/*.java
   warning: [options] bootstrap class path not set in conjunction with -source 1.6
   ../lib/hadoop/cdh4_yarn/common/hadoop-common-2.0.0-cdh4.3.0.jar(org/apache/hadoop/fs/Path.class):
   warning: Cannot find annotation method 'value()' in type
@@ -145,7 +160,7 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
  (Output below)
 
- ::
+::
 
   04:57:15.900 main      INFO WATER: ----- H2O started -----
   04:57:15.901 main      INFO WATER: Build git branch: master
