@@ -10,7 +10,7 @@ level of consensus among all of the trees.
 
 When to use RF
 """"""""""""""
-RF is a good choice When you are interested in determining the critical attributes or features of a data set. Here are some examples:
+RF is a good choice when you are interested in determining the critical attributes or features of a data set. Here are some examples:
 
   "There are 1000 variables in this data set. Of those, which most characterize differences between one observation and another with respect to the desired outcome variable?"
 
@@ -67,7 +67,7 @@ Features: a user defined tuning parameter for controlling model complexity (by n
 
 Depth: a user defined tuning parameter for controlling model complexity (by number of edges); depth is the longest path from root to the furthest leaf. 
 
-Stat type: a choice of criteria that determines the optimum spit at each node. 
+Stat type: a choice of criteria that determines the optimum split at each node. 
 	Entropy: (also known as information gain), entropy is a measure of uncertainty in a classification scheme. For example, if a two class population is 90% class A, and 10% class B, then there is a .90 probability that a randomly selected member of the population is A. This scheme has lower entropy than a population where 50% is class A, and 50% is class B. the objective of using the entropy impurity measure is to minimize this uncertainty.  
 	
 	Gini: an impurity measure based on the disparities in attribute correlation between the most and least dominant classes in a node. The objective of using this impurity measure is to choose the feature split that best isolates the dominant class.
@@ -78,6 +78,7 @@ Class weights: a user defined parameter to reduce the degree of imbalance in an 
 
 Sampling strategy: serves a similar purpose as class weights; 
 	Random Sampling: pulls subsets on which trees are built such that every observation has an equal chance of being drawn. 
+
 	Stratified Sampling: partitions data set by classification before sampling, and then samples from each subset. This implies that each class will be represented in every split, even if the class being drawn in a random sample was a low probability event. 
 
 
