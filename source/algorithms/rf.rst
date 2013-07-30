@@ -10,16 +10,14 @@ level of consensus among all of the trees.
 
 When to use RF
 """"""""""""""
-RF is a good choice When you are interested in determining the critical attributes or features of a data set. Here are some examples:
-
-  "There are 1000 variables in this data set. Of those, which most characterize differences between one observation and another with respect to the desired outcome variable?"
+RF is a good choice when your objective is classification. For example:
 
   "Given a large set of observations and attributes, the goal is to classify observations by spending habits."
 
 Quick step-by-step
 """"""""""""""""""
 
-#. Import data. Under the drop down menu Data choose from the options listed and follow the import helper.
+#. Import data. Under the drop down menu [Data] choose from the options listed and follow the import helper.
 
 #. Parse data. Once data have been imported choose SUBMIT (a button on the page). Data will parse automatically, and when finished you will be automatically directed to a page that provides you with a hex key ("data.hex"). A frame of data with summary statistics will also be displayed. 
 
