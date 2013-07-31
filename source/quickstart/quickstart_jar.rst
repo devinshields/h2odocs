@@ -4,11 +4,7 @@ From a pre-compiled jar
 
 Quick Step-by-step
 """"""""""""""""""
-1. Download the latest release of H2O as a .jar file  from 
-
-::
-
-  h2o download http://www.0xdata.com/h2o/
+1. Download the latest release of H2O as a .jar file from `the H2O website <http://0xdata.com/h2O/>`_.
 
 2. From your terminal change your working directory to the same directory where your .jar file is saved.
 
