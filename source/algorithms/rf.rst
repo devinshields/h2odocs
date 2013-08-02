@@ -5,8 +5,7 @@ Random Forest (RF)
 RF is a powerful classification tool. When given a set of data, RF
 generates a forest of classification trees, rather than a single classification 
 tree. Each of these trees generates a classification for a given set of 
-attributes, and the final classification is the assignment with the highest 
-level of consensus among all of the trees. 
+attributes. The classification from each tree can be thought of as a vote; the most votes determines the classificaiton. 
 
 When to use RF
 """"""""""""""
@@ -17,15 +16,15 @@ RF is a good choice when your objective is classification. For example:
 Quick step-by-step
 """"""""""""""""""
 
-#. Import data. Under the drop down menu [Data] choose from the options listed and follow the import helper.
+#. Import data. Under the drop down menu Data choose from the options listed and follow the import helper.
 
-#. Parse data. Once data have been imported choose SUBMIT (a button on the page). Data will parse automatically, and when finished you will be automatically directed to a page that provides you with a hex key ("data.hex"). A frame of data with summary statistics will also be displayed. 
+#. Parse data. Once data have been imported choose SUBMIT (a button on the page). Data will parse automatically, and when finished you will be directed to a page that provides you with a hex key ("data.hex"). A frame of data with summary statistics will also be displayed. 
 
 #. Specify model. From the drop down menu Model, or the horizontal menu displayed at the top of the page after parse choose Random Forest. 
 
-#. The user must specify Data key, the .hex key generated when you parsed your data. 
+#. The user must specify Data key, the .hex key generated when data were parsed. 
 
-#. The user must also specify the response variable, and the predictor variables. Note that highlighting a predictor EXCLUDES it from the classification. Note that predictors can take on many forms, but the response variable  must be quantitative.
+#. The user must also specify the response variable, and the predictor variables. Note that highlighting a predictor EXCLUDES it from the classification.
 
 #. Specification of N-tree is 50 by default. This tuning parameter allows users to specify the number of classification trees they wish to build. 
 
@@ -71,8 +70,7 @@ Stat type: a choice of criteria that determines the optimum split at each node.
 	Gini: an impurity measure based on the disparities in attribute correlation between the most and least dominant classes in a node. The objective of using this impurity measure is to choose the feature split that best isolates the dominant class.
 
 Ignore: is the set of columns other than the response variable that should be omitted from building the tree. 
-
-Class weights: a user defined parameter to reduce the degree of imbalance in an unbalanced data set. 
+ 
 
 Sampling strategy: serves a similar purpose as class weights; 
 	Random Sampling: pulls subsets on which trees are built such that every observation has an equal chance of being drawn. 
@@ -86,7 +84,10 @@ Out of bag error estimate: Every tree RF internally constructs a test/ train spl
 
 Bin Limit: a user defined tuning parameter for controlling model complexity, bin limit caps the the maximum number of groups into which the orginal data are to be categorized.
 
-Seed: A large number that allows the analyst to recreate an analysis by specifying a starting point for black box processes that would otherwise occur at a randomly chosen place within the data. 
+Seed: A large number that allows the analyst to recreate an analysis by specifying a starting point for black box processes that would otherwise occur at a randomly chosen place within the data.
+
+Class Weight: When observerd classifications in training data are uneven, users may wish to correct this by weighting. Weights should be assigned so that if chosen at random, an observation of each classification has an equal chance. For example, if there are two classifications A and B in a data set, such that As occur about 10% of the time, and Bs occur the rest, A should given a weight of 5, and B of .56. 
+ 
 
 
 Interpreting Results
