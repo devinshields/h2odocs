@@ -24,21 +24,21 @@ influence that variable. Here are some examples:
 Quick step-by-step
 """"""""""""""""""
        
-#. Import data. Under the drop down menu Data choose from the options
+#. Import data. Under the drop down menu **Data** choose from the options
    listed, and follow the import helper.
   
 
-#. Parse data. Once data have been imported choose SUBMIT (a button on
+#. Parse data. Once data have been imported choose **SUBMIT** (a button on
    the page).  When parse finishes the page redirects to output of a
    data frame with summary statistics and the H2O assigned .hex key  
 
 
 #. Specify a model. Model options are listed both at the top of the
    page displaying parsed data, as well as under the drop down menu
-   Model. Select GLM. 
+   **Model**. Select **GLM**. 
 
 
-#. Destination Key can be left blank and will be automatically
+#. *Destination Key* can be left blank and will be automatically
    generated, or can be user specified.
 
 
@@ -58,11 +58,11 @@ Quick step-by-step
    being predicted. 
 
 
-#. Tuning parameters lambda, alpha, and alternative link functions can be
+#. Tuning parameters *lambda*, *alpha*, and alternative link functions can be
    defined, however it is not necessary for the analysis to run.
 
 
-#.  Press SUBMIT.  
+#.  Press **SUBMIT**.  
 
   
 Scoring and predicting
@@ -74,11 +74,11 @@ To score a model:
    variables utilized in building the original model. 
 
 
-#. Under the drop down menu Score select GLM.
+#. Under the drop down menu **Score** select GLM.
 
 
-#. In model key enter the .hex key generated when the model was
-   built. Model key can be found in Admin drop down menu by
+#. In *model key* enter the .hex key generated when the model was
+   built. Model key can be found in **Admin** drop down menu by
    selecting Jobs and choosing the correct model from the list. 
 
 
@@ -88,7 +88,7 @@ To score a model:
 #. Adjust thresholds if needed (for binomial models).
 
 
-#. Press submit
+#. Press **SUBMIT**
 
 
 Notes on scoring: Model scoring is used to test the predictive ability
@@ -105,13 +105,13 @@ Predicting
    data should have the same variables as those used in generating the
    model to be applied. 
 
-#. Under the drop down menu Score select Predict
+#. Under the drop down menu **Score** select Predict
    
 #. Enter the destination key for your model (which can be found under
    Jobs in the Admin drop down menu if needed), and the .hex key for
    the data to be predicted on. 
 
-#. Press Submit
+#. Press **SUBMIT**
 
 #. The resulting column is a row by row match with the data submitted,
    giving a predicted value. This output can be downloaded and saved
