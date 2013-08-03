@@ -36,6 +36,13 @@ For Data Scientists (using a Web Browser)...
    datascience/top
    benchmarks/top
 
+For Data Scientists (using R)...
+++++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
+   userguide/topR
 
 For Web Developers (REST/JSON API)...
 +++++++++++++++++++++++++++++++++++++++++++
