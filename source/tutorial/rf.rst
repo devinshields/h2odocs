@@ -84,7 +84,7 @@ Building a Model
 
 
 .. image:: RequestRF1.png
-   :width: 100%
+   :width: 90%
 
 
 RF Output
@@ -107,7 +107,7 @@ is also an option to go directly to generating predictions for
 another dataset. 
 
 .. image:: RFoutput.png
-   :width: 100 %
+   :width: 90 %
 
 
 
@@ -123,7 +123,7 @@ Using the predict function requires the .hex key associated with a
 model. To find this go to the drop down menu Admin and select Jobs.
 
 .. image:: DropdownAdmin.png
-   :width: 100 %
+   :width: 90 %
 
 
 
@@ -140,6 +140,6 @@ the model.
  
 
 .. Image:: RequestPredict.png
-   :width: 100 %
+   :width: 90 %
 
 THE END.  

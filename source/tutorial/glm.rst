@@ -5,7 +5,7 @@ The purpose of this tutorial is to walk the new user through
 a GLM analysis beginning to end. The objective is to  learn how to
 specify, run, and interpret a GLM model. 
 
-Those who have never used H2O before should see the quickstart quide
+Those who have never used H2O before should see the quick start guide
 for additional instructions on how to run H2O.
 
 Getting Started
@@ -26,7 +26,7 @@ and Rings is discrete.
 
 Before modeling, parse data into H2O as follows:
 
-#. Under the drop down menu Data select Upload and use the helper to
+#. Under the drop down menu **Data** select *Upload* and use the helper to
    upload data.  
 
 

@@ -9,9 +9,9 @@ H2O System Requirements
 Minimum of 2g ram available on the machine where H2O will be running
 (Note that users may have to adjust the amount of memory allocated to H2O regardless of the 
 total amount of memory available on their machines. Details for how to
-do this can be found in the quickstart guide.)
+do this can be found in the quick start guide.)
 
-A reasonably modern web browser (for example, the lastest version of
+A reasonably modern web browser (for example, the latest version of
 Firefox, Safari or IE.)
 
 Users who are running H2O on a server must ensure that the data are
@@ -63,6 +63,6 @@ Step by step instructions on how to use each of the tool sets can be
 found in User Guides by selecting the algorithm of choice. Users have
 a variety of options for accessing and running H2O. For instructions
 on how to get started using H2O (for example through R, using Java, or
-via git-hub), please see the Quick Start Quides. New users may also
+via git-hub), please see the Quick Start Guides. New users may also
 find the glossary useful for familiarizing themselves with H2O's
 computing and statistics terms. 

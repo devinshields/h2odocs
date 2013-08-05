@@ -109,13 +109,13 @@ drop down menu Score. Specify the K-Means model key, and the
 .hex key for the data set originally used. 
 
 .. image:: KMrscore.png
-   :width: 100%
+   :width: 90%
 
 The output obtained when submit is pressed is the number of rows 
 assigned to each cluster, and the squared error per cluster. 
 
 .. image:: KMscore.png
-   :width: 90%
+   :width: 80%
 
 
 K-means Apply
@@ -130,7 +130,7 @@ Here cluster assignments have been generated
 for the original data. Because the data have been sufficiently well 
 researched, the ideal cluster assignments were known in
 advance. Comparing known cluster with predicted cluster demonstrated
-that this K-Means model classfies with a less than 10% error rate. 
+that this K-Means model classifies with a less than 10% error rate. 
 
 .. image:: KMapply.png
    :width: 100%
