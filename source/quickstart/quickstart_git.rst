@@ -185,3 +185,16 @@ These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
 
 4. Point your web browser to the HTTP URL (``http://your-ip-address:54321``); H2O will run from there.  
 
+
+Updating H2O from Github
+-------------------------
+
+1. Change directory to h2o directory created when the git repository was originally cloned. 
+
+2. Pull the latest code, and update 
+
+::
+
+  $ git pull   #pulls the latest code, and will vary depending on recent changes
+  $ make       #reconciles changes with the user's repository
+  
