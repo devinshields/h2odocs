@@ -43,7 +43,7 @@ set and the training set. Split your data appropriately and parse them
 both now. 
 
 .. image:: GLMparse.png
-   :width: 100 %
+   :width: 100%
 
 After parsing:
 
