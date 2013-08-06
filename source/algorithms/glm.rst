@@ -270,13 +270,13 @@ H2O is able to process large data sets because it relies on paralleled processes
 In GLM data are split by rows, but not by columns because the predicted Y values depend on information in each of the predictor variable vectors. If we let O be a complexity function, N be the number of observations (or rows), and p be the number of predictors (or columns) then: 
 
 .. image:: complexity.jpg
-   :width: 80%
+   :width: 40%
 
 Distribution reduces the time it takes an algorithm to process because it decreases N. 
 
 
 .. image:: runtime.jpg
-   :width: 80%
+   :width: 40%
 
 Relative to p, the larger that (N/CPUs) becomes, the more trivial p becomes to the overall computational cost. However, when p is greater than (N/CPUs), O is dominated by p. 
   
