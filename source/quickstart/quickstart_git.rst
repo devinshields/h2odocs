@@ -195,6 +195,6 @@ Updating H2O from Github
 
 ::
 
-  $ git pull   #pulls the latest code, and will vary depending on recent changes
-  $ make       #reconciles changes with the user's repository
+  $ git pull
+  $ make
   
