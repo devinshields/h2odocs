@@ -1,8 +1,6 @@
 For Eclipse users (Github)
 ----------------------------
 
-These instructions assume you are using Linux, MacOSX, or Cygwin (on Windows).
-
 1. Create a git clone of the H2O repository.
 
  ::
