@@ -2,4 +2,4 @@
 Java API
 --------
 
-`Visit the H2O Java programming API (as Javadoc) by clicking here. <../../../../h2o/target/javadoc/index.html>`_
+`Visit the H2O Java programming API (as Javadoc) by clicking here. <../bits/javadoc/index.html>`_
