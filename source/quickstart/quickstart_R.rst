@@ -1,35 +1,11 @@
-Using R (after installing H2O)
-------------------------------
+Using H2O through R (after installing H2O from Github)
+------------------------------------------------------
 
 From the R Console
 """"""""""""""""""
 
 These instructions assume you are using a recent version of R, and are familiar with the basics of using command line. In order to use H2O from inside of R, users will first need to follow the quick start instructions for installing H2O via github. 
 
-Assuming the user has already installed the h2o directory from github, **from the terminal** change the current directory to …/h2o/R
-
-::
-
-  $ cd "file path"/h2o/R
-
-Once in the correct directory /h2o/R enter the command
-
-::
-
-  $ R CMD build h2o-package
-
-which creates a .tar.gz file, and returns the following output:
-
-::
-
-  * checking for file ‘h2o-package/DESCRIPTION’ ... OK
-  * preparing ‘h2o’:
-  * checking DESCRIPTION meta-information ... OK
-  * checking for LF line-endings in source and make files
-  * checking for empty or unneeded directories
-  * building ‘h2o_1.7.0.99999.tar.gz’
-
-Minimize the terminal window and return to the R console. 
 
 In the R console install the library by entering the following command at the prompt:
 
@@ -37,21 +13,14 @@ In the R console install the library by entering the following command at the pr
 
   >install.packages("**directory for h2o R**/ **tar.gz file name**", repos = NULL, type = "source")
   
-**To find the directory for h2o R**, in the terminal window enter 
+**The directory for h2o R** can be found inside the same file path where H2O was originally installed. Depending on where the git repository was originally cloned, each user's path will be unique. However, within the H2O file go here:  
 
 ::
 
-  $ pwd
+  /.../h2o/target/R
 
-This command *prints working directory*, and returns a path to the h2o R directory that R can follow. Copy the output to your R console in place of "**directory for h2o R**"
+**To find the tar.gz file name**, go to h2o ==> target ==> R, and find the file with the extension ".tar.gz."  
 
-**To find the tar.gz file name**, in the terminal window enter 
-
-::
-
-  $ ls
-
-This command prints a list of all of the files in that directory. From that list find the file with the extension .tar.gz, and use this file name in place of  ** tar.gz file name **" in the R command prompt. 
 
 For example, a user at 0x data enters the following into her R terminal at the command prompt:
 
@@ -79,8 +48,7 @@ Which returns the following output
   ** building package indices
   ** testing if installed package can be loaded
   * DONE (h2o)
-
-To start running H2O from the R console the user must build a path for R to talk to H2O, which requires starting an instance of H2O. Users will need to return to the terminal. 
+ 
 
 ::
 
@@ -101,16 +69,15 @@ In the R terminal enter
 
   > localH2O = new("H2OClient")
 
-Minimize the R console and **return to the terminal.**
-In the terminal enter the following commands
+Minimize the R console and **return to the command line terminal.**
+In the command line terminal enter the following commands
 
 ::
   
-  $ cd .. # moves the user up one level in the directory
-  $ cd target # moves the user into the directory where the h2o program is located
+  $ cd file path to h2o/target # moves the user to the target file within the h2o file
   $ java -Xmx2g -jar h2o.jar -name mystats-cloud # java command to run the h2o program 
 
-This starts the h2o program, and returns output similar to the following: 
+This starts H2O, and returns output similar to the following: 
 
 ::
 
@@ -146,7 +113,7 @@ Which returns the following output
 
   Successfully connected to http://127.0.0.1:54321 
 
-Users can now run H2O from their running R console. Additional R documentation can be found here
+Users can now run H2O from their R console. Additional R documentation can be found here
 
 ::
 
@@ -155,32 +122,7 @@ Users can now run H2O from their running R console. Additional R documentation c
 From R Studio
 """""""""""""
 
-These instructions assume you are using a recent version of R, and are familiar with the basics of using command line. In order to use H2O from inside of R, users will first need to follow the quick start instructions for installing H2O via github. 
-
-Assuming the user has already installed the h2o directory from github, **from the terminal** change the current directory to …/h2o/R
-
-::
-
-  $ cd "file path"/h2o/R
-
-Once in the correct directory /h2o/R enter the command
-
-::
-
-  $ R CMD build h2o-package
-
-which creates a .tar.gz file, and returns the following output:
-
-::
-
-  * checking for file ‘h2o-package/DESCRIPTION’ ... OK
-  * preparing ‘h2o’:
-  * checking DESCRIPTION meta-information ... OK
-  * checking for LF line-endings in source and make files
-  * checking for empty or unneeded directories
-  * building ‘h2o_1.7.0.99999.tar.gz’
-
-Minimize the terminal window and return to the R Studio GUI.
+Open the R Studio GUI.
 While location within the GUI may differ depending on each user's unique configuration, find the menu with **tabbed options Files, Plots, Packages, Help** 
 
 Select the *Packages* tab
@@ -189,13 +131,11 @@ Choose *Install Packages*
 
 From the drop down menu select *Package Archive.*
 
-Navigate through the helper that appears to H2O R directory. For example, a user at 0xdata would go to Documents ==> h2o ==> R and select the file ending in **'.tar.gz'. Click Open.**
+Navigate through the helper that appears to H2O R directory. For example, a user at 0xdata would go to Documents ==> h2o ==> target ==> R and select the file ending in **'.tar.gz'. Click Open.**
 
 On the resulting helper button **click Install.**
 
 The R package will install. 
-
-To start running H2O from the R console the user must build a path for R to talk to H2O, which requires starting an instance of H2O. Users will need to return to the terminal. 
 
 ::
 
@@ -210,7 +150,7 @@ which returns the following output
   Loading required package: bitops
   Loading required package: rjson
 
-In the R terminal enter
+In the R Studio console enter
 
 ::
 
@@ -218,14 +158,14 @@ In the R terminal enter
 
 Minimize the R console and **return to the terminal.**
 In the terminal enter the following commands
+(note that the first part of the file path in the cd command should be the path where the H2O repository was originally cloned). 
 
 ::
   
-  $ cd .. # moves the user up one level in the directory
-  $ cd target # moves the user into the directory where the h2o program is located
-  $ java -Xmx2g -jar h2o.jar -name mystats-cloud # java command to run the h2o program 
+  $ cd /.../h2o/target # moves the user up one level in the directory 
+  $ java -Xmx2g -jar h2o.jar -name mystats-cloud # java command to run H2O 
 
-This starts the h2o program, and returns output similar to the following: 
+This starts H2O, and returns output similar to the following: 
 
 ::
 
@@ -261,7 +201,7 @@ Which returns the following output
 
   Successfully connected to http://127.0.0.1:54321 
 
-Users can now run H2O from their running R console. Additional R documentation can be found in the R section of the main user documentation page. Users can also enter **??h2o** at any time to access help. 
+Users can now run H2O from their R Studio console. Additional R documentation can be found in the R section of the main user documentation page. Users can also enter **??h2o** at any time to access help. 
 
 
 Helpful Tips
