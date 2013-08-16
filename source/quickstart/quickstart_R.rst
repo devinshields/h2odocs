@@ -132,7 +132,7 @@ Users can now run H2O from their R console. Additional R documentation can be fo
   https://github.com/0xdata/h2o/blob/master/R/h2o-package/h2o_package.pdf   
 
 
-Users can now run H2O from their R Studio console. Additional R documentation can be found in the R section of the main user documentation page. Users can also enter **??h2o** at any time to access help. 
+Users can now run H2O from their R or R Studio console. Additional R documentation can be found in the R section of the main user documentation page. Users can also enter **??h2o** at any time to access help. 
 
 
 **Users can change the amount of memory allocated to H2O.** In the Java command entered in the terminal to start H2O the term **-Xmx2g** was used. Xmx is the amount of memory given to H2O. If your data set is large, give H2O more memory (for example, -Xmx4g gives H2O four gigabytes of memory). For best performance, Xmx should be 4x the size of your data, but never more than the total amount of memory on your computer. 

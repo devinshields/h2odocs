@@ -8,3 +8,4 @@ Tutorial Documentation
    glm
    kmeans
    rf
+   publicdata
