@@ -82,6 +82,7 @@ Miscellaneous...
    :maxdepth: 2
 
    glossary
+   publicdata
    testing/top
    howto/top
    license
