@@ -1,5 +1,9 @@
-Using H2O through R (Easy Start from Download)
-----------------------------------------------
+Using H2O through R
+-------------------
+
+Users who wish to run H2O through R or R studio can easily do so. They should first 
+
+**Users can also run H2O through R via a quick install package** the quick install package requires NO USE OF A COMMAND LINE TERMINAL. Instructions for the quick installer can be found in the **Installer** page in the Quickstart section. 
 
 From the R Console
 """"""""""""""""""
