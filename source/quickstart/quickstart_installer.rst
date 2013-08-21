@@ -4,12 +4,21 @@ From an Installer Package
 From the website below choose download installer for mac or windows as appropriate, and follow the installation helper to install H2O. 
 
 ::
+  
+   MAC USERS: https://s3.amazonaws.com/h2o-release/master/493/h2o-1.7.0.493-osx-installer.dmg
+   
+::
 
-  http://0xdata.com/h2O/
+   WINDOWS USERS: https://s3.amazonaws.com/h2o-release/master/493/h2o-1.7.0.493-windows-installer.exe
+
+::
+
+  OTHERS USERS: https://s3.amazonaws.com/h2o-release/master/493/h2o-1.7.0.493.zip
 
 
+An installation helper will guide you through the rest of the installation. 
 
-Find the installed application in the installation directory, and double click on the H2O icon. A simple launcher will open. Clicking on **0xdata** in the upper left corner will take you to the 0xdata website, where you can find more information. 
+Find the installed application in the installation directory, and double click on the H2O icon. A simple launcher will open. Clicking on **0xdata** in the upper left corner will take you to the 0xdata documents website, where you can find more information. 
 
 To adjust the amount of memory that is allocated to H2O, enter the appropriate level of memory in GB. A good guideline for memory allocation is that memory allocation should be 4x the size of your data, but never more than the total amount of memory on your
 computer.
