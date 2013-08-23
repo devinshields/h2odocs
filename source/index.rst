@@ -86,3 +86,6 @@ Miscellaneous...
    testing/top
    howto/top
    license
+   troubleshoot
+   index
+   contactus

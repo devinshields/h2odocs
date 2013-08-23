@@ -92,6 +92,13 @@ http://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset
 **Caret**
 http://caret.r-forge.r-project.org/datasets.html
 
+**RevolutionR**
+http://www.revolutionanalytics.com/subscriptions/datasets/
+
+**Find your favorite dataset!**
+http://www.inside-r.org/howto/finding-data-internet
+
+
 
 Public Policy Data
 """"""""""""""""""
